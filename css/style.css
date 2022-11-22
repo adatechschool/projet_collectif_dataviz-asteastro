@@ -1,9 +1,65 @@
-h1,h2,div,p,form
-{
-    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+body {
+  background-image: url("/images/andy-holmes-rCbdp8VCYhQ-unsplash.jpg");
 }
 
-h1
-{
-    color:seagreen
+h1,
+h2,
+div,
+p {
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 6vw;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  font-size: 2vw;
+}
+
+.APOD {
+  text-align: center;
+}
+
+p {
+  color: white;
+  line-height: 24px;
+}
+.description {
+  padding: 5px;
+  width: 700px;
+  margin: auto;
+}
+
+.description p {
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: left;
+  margin-left: 25px;
+  padding: 14px;
+}
+
+.description img {
+  height: 100px;
+  width: 100px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  margin-top: 25px;
+  padding: 14px;
+}
+
+.content h3 {
+  color: aliceblue;
+  text-align: left;
+  margin-left: 25px;
+}
+
+input {
+  font-size: 25px;
 }
