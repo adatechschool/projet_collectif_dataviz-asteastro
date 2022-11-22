@@ -1,17 +1,23 @@
 // import fetch from 'node-fetch';
 
-const url = "https://api.nasa.gov/planetary/apod?api_key=byMXZRYPDymQvCcgAEarTFUmCZVtf4OXrnRu5UPY&date="
+const url =
+  "https://api.nasa.gov/planetary/apod?api_key=byMXZRYPDymQvCcgAEarTFUmCZVtf4OXrnRu5UPY&date=";
 
-//Afficher l'image lorsqu'une date est sélectionnée
-document.getElementById("date").oninput = function() {fetchData()};
+//Afficher l'image uniquement lorsqu'une date est sélectionnée
+document.getElementById("date").oninput = function () {
+  fetchData();
+  datePlus7();
+  fetchAsteroides();
+};
 
-function dateSaisie(){
+//Récupérer la date saisie
+function dateSaisie() {
   const saisie = document.getElementById("date").value;
-  console.log(saisie);
-  return saisie
-  }
+  return saisie;
+}
 
-function fetchData(){
+//Afficher l'image du jour (API APOD)
+function fetchData() {
   fetch(url + dateSaisie() + "&")
     .then((response) => {
       return response.json();
@@ -26,4 +32,26 @@ function fetchData(){
       description.innerHTML = nasaData.explanation;
     });
 }
-//fetchData()
+//Afficher les astéroides (API NeoWS)
+const startURL = "https://api.nasa.gov/neo/rest/v1/feed?start_date=";
+const endURL = "&api_key=byMXZRYPDymQvCcgAEarTFUmCZVtf4OXrnRu5UPY";
+
+//Récupérer la date saisie + 7 jours
+function datePlus7() {
+  let dateArray = dateSaisie().split("-");
+  let daysPlusSept = parseInt(dateArray[2]) + 7;
+  console.log(daysPlusSept);
+  let datePlusSept = dateArray[0] + "-" + dateArray[1] + "-" + daysPlusSept;
+  console.log(datePlusSept);
+  return daysPlusSept;
+}
+
+function fetchAsteroides() {
+  fetch(startURL + dateSaisie() + "end_date=" + datePlus7() + endURL)
+    .then((response) => {
+      return response.json();
+    })
+    .then((asteroides) => {
+      console.log(asteroides);
+    });
+}
