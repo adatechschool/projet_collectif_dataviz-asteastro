@@ -6,7 +6,7 @@ const url =
 //Afficher l'image uniquement lorsqu'une date est sélectionnée
 document.getElementById("date").oninput = function () {
   fetchData();
-  datePlus7();
+  // datePlus7();
   fetchAsteroides();
 };
 
@@ -37,14 +37,14 @@ const startURL = "https://api.nasa.gov/neo/rest/v1/feed?start_date=";
 const endURL = "&api_key=byMXZRYPDymQvCcgAEarTFUmCZVtf4OXrnRu5UPY";
 
 //Récupérer la date saisie + 7 jours
-function datePlus7() {
-  let dateArray = dateSaisie().split("-");
-  let daysPlusSept = parseInt(dateArray[2]) + 4;
-  console.log(daysPlusSept);
-  let datePlusSept = dateArray[0] + "-" + dateArray[1] + "-" + daysPlusSept;
-  console.log(datePlusSept);
-  return datePlusSept;
-}
+// function datePlus7() {
+//   let dateArray = dateSaisie().split("-");
+//   let daysPlusSept = parseInt(dateArray[2]) + 4;
+//   console.log(daysPlusSept);
+//   let datePlusSept = dateArray[0] + "-" + dateArray[1] + "-" + daysPlusSept;
+//   console.log(datePlusSept);
+//   return datePlusSept;
+// }
 
 function fetchAsteroides() {
   fetch(startURL + dateSaisie() + "&end_date=" + dateSaisie() + endURL)
@@ -53,5 +53,8 @@ function fetchAsteroides() {
     })
     .then((asteroides) => {
       console.log(asteroides);
+      const name = document.querySelector("#nom");
+      const dateToString = dateSaisie().toString();
+      name.innerHTML = asteroides.near_earth_objects[dateToString][0].name;
     });
 }

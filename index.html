@@ -10,16 +10,23 @@
 
   <body>
     <h1>Asté Astro</h1>
+    <input type="date" id="date" />
     <section class="APOD">
-      <h2>Picture of the day</h2>
-      <input type="date" id="date" />
       <div class="content">
+        <h2>Picture of the day</h2>
         <div class="image"><img id="photo" /></div>
         <div class="description">
           <h3 id="title"></h3>
           <p id="description"></p>
         </div>
       </div>
+      <h2>Asteroide of the day</h2>
+      <p id="nom">Nom :</p>
+      <p id="hazardous">Hazardous :</p>
+      <p id="sentry">Sentry :</p>
+      <p id="distance">Miss distance :</p>
+      <p id="diametre">Diametre (en km) :</p>
+      <p id="vitesse">Vitesse (en km/heure) :</p>
     </section>
 
     <script type="module" src="./js/script.js" defer></script>

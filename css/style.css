@@ -58,6 +58,8 @@ p {
   flex-wrap: wrap;
   margin-top: 25px;
   padding: 14px;
+  text-align: center;
+  margin: auto;
 }
 
 .content h3 {
