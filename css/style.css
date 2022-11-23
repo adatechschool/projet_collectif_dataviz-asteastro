@@ -1,5 +1,6 @@
 body {
   background-image: url("/images/andy-holmes-rCbdp8VCYhQ-unsplash.jpg");
+  background-size: cover;
 }
 
 h1,
@@ -31,25 +32,30 @@ p {
 }
 .description {
   padding: 5px;
-  width: 700px;
+  max-width: 700px;
   margin: auto;
 }
 
 .description p {
   background-color: rgba(0, 0, 0, 0.6);
   text-align: left;
-  margin-left: 25px;
   padding: 14px;
 }
 
-.description img {
-  height: 100px;
-  width: 100px;
+.content img {
+  max-width: 700px;
+}
+
+.image {
+  justify-content: center;
+  margin: auto;
 }
 
 .content {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-top: 25px;
   padding: 14px;
 }
@@ -57,9 +63,9 @@ p {
 .content h3 {
   color: aliceblue;
   text-align: left;
-  margin-left: 25px;
 }
 
 input {
   font-size: 25px;
+  margin-bottom: 25px;
 }

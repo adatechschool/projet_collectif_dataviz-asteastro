@@ -39,15 +39,15 @@ const endURL = "&api_key=byMXZRYPDymQvCcgAEarTFUmCZVtf4OXrnRu5UPY";
 //Récupérer la date saisie + 7 jours
 function datePlus7() {
   let dateArray = dateSaisie().split("-");
-  let daysPlusSept = parseInt(dateArray[2]) + 7;
+  let daysPlusSept = parseInt(dateArray[2]) + 4;
   console.log(daysPlusSept);
   let datePlusSept = dateArray[0] + "-" + dateArray[1] + "-" + daysPlusSept;
   console.log(datePlusSept);
-  return daysPlusSept;
+  return datePlusSept;
 }
 
 function fetchAsteroides() {
-  fetch(startURL + dateSaisie() + "end_date=" + datePlus7() + endURL)
+  fetch(startURL + dateSaisie() + "&end_date=" + dateSaisie() + endURL)
     .then((response) => {
       return response.json();
     })
