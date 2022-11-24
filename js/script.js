@@ -7,6 +7,8 @@ const url =
 document.getElementById("date").oninput = function () {
   fetchData();
   // datePlus7();
+};
+document.getElementById("moonContainer").onclick = function () {
   fetchAsteroides();
 };
 
@@ -68,6 +70,5 @@ function fetchAsteroides() {
       distance.innerHTML = `His missdistance : ${asteroides.near_earth_objects[dateToString][0].close_approach_data[0].miss_distance.kilometers} Km`;
       const vitesse = document.querySelector("#vitesse");
       vitesse.innerHTML = `His velocity : ${asteroides.near_earth_objects[dateToString][0].close_approach_data[0].relative_velocity.kilometers_per_hour} Km/hour`;
-      
     });
 }

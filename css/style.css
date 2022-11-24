@@ -39,7 +39,6 @@ p {
 
 .NEO {
   padding: 5px;
-  max-width: 700px;
   margin: auto;
 }
 
@@ -79,20 +78,22 @@ input {
   margin-bottom: 25px;
 }
 
+.input {
+  text-align: center;
+}
 #earth {
   position: relative;
   height: 400px;
   width: 400px;
   margin-top: 175px;
-  margin-bottom: 300px;
+  margin-bottom: 180px;
   margin-left: auto;
-  margin-right: auto;
   background-image: url(/images/terre.png);
   background-size: 400px;
   overflow: visible;
 }
 
-#moonContainer{
+#moonContainer {
   position: absolute;
   top: -60px;
   left: -128px;
@@ -107,7 +108,7 @@ input {
   -webkit-animation-duration: 15s;
 }
 
-#moon{
+#moon {
   position: absolute;
   top: -55px;
   left: 175px;
@@ -122,13 +123,20 @@ input {
   -webkit-animation-duration: 5s;
 }
 
-
-@-webkit-keyframes moonOrbit{
-  from {-webkit-transform: rotate(0deg);}
-  to {-webkit-transform: rotate(360deg);}
+@-webkit-keyframes moonOrbit {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
-@-webkit-keyframes moonRotate{
-  from {-webkit-transform: rotate(360deg);}
-  to {-webkit-transform: rotate(0deg);}
+@-webkit-keyframes moonRotate {
+  from {
+    -webkit-transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+  }
 }

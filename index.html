@@ -9,11 +9,10 @@
   </head>
 
   <body>
-
     <h1>Asté Astro</h1>
 
     <!-- Saisir la date -->
-    <input type="date" id="date" />
+    <div class="input"><input type="date" id="date" /></div>
 
     <!-- Photo du jour -->
     <section class="APOD">
@@ -28,31 +27,32 @@
     </section>
 
     <!-- Astéroïd du jour -->
-    <section class="NEO"></section>
-      <h2>Asteroid of the day</h2>
-      <div class="description">
-        <p id="nom"></p>
-        <p id="hazardous"></p>
-        <p id="sentry"></p>
-        <p id="distance"></p>
-        <p id="diametre_min"></p>
-        <p id="diametre_max"></p>
-        <p id="vitesse"></p>
-      </div>
-    </section>
+    <h2>Asteroid of the day</h2>
 
     <!-- Astéroïde autour de la terre -->
-    <section class="terre">
-      <div id="earth">
-        <div id="moonContainer">
+    <section class="NEO">
+      <div class="content">
+        <div id="earth">
+          <div id="moonContainer">
             <div id="moon"></div>
+          </div>
+        </div>
+
+        <!-- Informations asteroides-->
+
+        <div class="description">
+          <p id="nom"></p>
+          <p id="hazardous"></p>
+          <p id="sentry"></p>
+          <p id="distance"></p>
+          <p id="diametre_min"></p>
+          <p id="diametre_max"></p>
+          <p id="vitesse"></p>
         </div>
       </div>
     </section>
 
-
     <!-- Javascript -->
     <script type="module" src="./js/script.js" defer></script>
-
   </body>
 </html>
