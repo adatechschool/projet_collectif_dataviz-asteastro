@@ -1,6 +1,6 @@
 body {
   background-image: url("/images/andy-holmes-rCbdp8VCYhQ-unsplash.jpg");
-  background-size: cover;
+  background-size: auto;
 }
 
 h1,
@@ -30,7 +30,14 @@ p {
   color: white;
   line-height: 24px;
 }
+
 .description {
+  padding: 5px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.NEO {
   padding: 5px;
   max-width: 700px;
   margin: auto;
@@ -74,23 +81,24 @@ input {
 
 #earth {
   position: relative;
-  height: 256px;
-  width: 256px;
+  height: 400px;
+  width: 400px;
   margin-top: 175px;
+  margin-bottom: 300px;
   margin-left: auto;
   margin-right: auto;
-  background-image: url(./images/terre.png);
-  background-size: 256px;
+  background-image: url(/images/terre.png);
+  background-size: 400px;
   overflow: visible;
 }
 
 #moonContainer{
   position: absolute;
-  top: -100px;
-  left: -50px;
-  width: 456px;
+  top: -60px;
+  left: -128px;
+  width: 600px;
   height: 456px;
-  border: 2px solid white;
+  /*border: 2px solid white;*/
   border-radius: 228px;
 
   -webkit-animation-name: moonOrbit;
@@ -103,10 +111,10 @@ input {
   position: absolute;
   top: -55px;
   left: 175px;
-  width: 80px;
-  height: 80px;
-  background-image: url(./images/aste.png);
-  background-size: 80px;
+  width: 60px;
+  height: 60px;
+  background-image: url(/images/aste.png);
+  background-size: 60px;
 
   -webkit-animation-name: moonRotate;
   -webkit-animation-iteration-count: infinite;
