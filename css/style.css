@@ -20,6 +20,7 @@ h2 {
   color: white;
   text-align: center;
   font-size: 2vw;
+  margin-top: 80px;
 }
 
 .APOD {
@@ -98,7 +99,7 @@ input {
   top: -60px;
   left: -128px;
   width: 600px;
-  height: 456px;
+  height: 506px;
   /*border: 2px solid white;*/
   border-radius: 228px;
 
@@ -139,4 +140,34 @@ input {
   to {
     -webkit-transform: rotate(0deg);
   }
+}
+
+#moonContainer2 {
+  position: absolute;
+  top: -75px;
+  left: -100px;
+  width: 600px;
+  height: 456px;
+  /*border: 2px solid white;*/
+  border-radius: 228px;
+
+  -webkit-animation-name: moonOrbit;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-duration: 10s;
+}
+
+#moon2 {
+  position: absolute;
+  top: -55px;
+  left: 175px;
+  width: 40px;
+  height: 40px;
+  background-image: url(/images/aste.png);
+  background-size: 40px;
+
+  -webkit-animation-name: moonRotate;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-duration: 10s;
 }

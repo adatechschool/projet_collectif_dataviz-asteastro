@@ -8,7 +8,7 @@ document.getElementById("date").oninput = function () {
   fetchData();
   // datePlus7();
 };
-document.getElementById("moonContainer").onclick = function () {
+document.getElementById("earth").onclick = function () {
   fetchAsteroides();
 };
 
@@ -57,15 +57,28 @@ function fetchAsteroides() {
       console.log(asteroides);
       const name = document.querySelector("#nom");
       const dateToString = dateSaisie().toString();
+      const dictionnaire = {
+        false: "No",
+        true: "Yes",
+      };
       name.innerHTML = `His name : ${asteroides.near_earth_objects[dateToString][0].name}`;
       const diameter_min = document.querySelector("#diametre_min");
       diameter_min.innerHTML = `His minimum diameter : ${asteroides.near_earth_objects[dateToString][0].estimated_diameter.kilometers.estimated_diameter_min} Km`;
       const diameter_max = document.querySelector("#diametre_max");
       diameter_max.innerHTML = `His maximum diameter : ${asteroides.near_earth_objects[dateToString][0].estimated_diameter.kilometers.estimated_diameter_max} Km`;
       const hazardous = document.querySelector("#hazardous");
-      hazardous.innerHTML = `Was he hazardous ? : ${asteroides.near_earth_objects[dateToString][0].is_potentially_hazardous_asteroid}`;
+      hazardous.innerHTML = `Was he hazardous : ${
+        dictionnaire[
+          asteroides.near_earth_objects[dateToString][0]
+            .is_potentially_hazardous_asteroid
+        ]
+      }`;
       const sentry = document.querySelector("#sentry");
-      sentry.innerHTML = `Was he sentry ? : ${asteroides.near_earth_objects[dateToString][0].is_sentry_object}`;
+      sentry.innerHTML = `Was he sentry ? ${
+        dictionnaire[
+          asteroides.near_earth_objects[dateToString][0].is_sentry_object
+        ]
+      }`;
       const distance = document.querySelector("#distance");
       distance.innerHTML = `His missdistance : ${asteroides.near_earth_objects[dateToString][0].close_approach_data[0].miss_distance.kilometers} Km`;
       const vitesse = document.querySelector("#vitesse");
