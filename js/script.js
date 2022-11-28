@@ -12,6 +12,7 @@ document.getElementById("date").oninput = function () {
 };
 document.getElementById("earth").onclick = function () {
   fetchAsteroides();
+  hideAsteroidDescription();
 };
 
 //Récupérer la date saisie
@@ -32,7 +33,7 @@ function fetchData() {
       title.innerHTML = nasaData.title;
       const photo = document.querySelector("#photo");
       photo.src = nasaData.url;
-      const description = document.querySelector("#description");
+      const description = document.querySelector("#description-picture");
       description.innerHTML = nasaData.explanation;
     });
 }
@@ -69,7 +70,7 @@ function fetchAsteroides() {
       const diameter_max = document.querySelector("#diametre_max");
       diameter_max.innerHTML = `His maximum diameter : ${asteroides.near_earth_objects[dateToString][0].estimated_diameter.kilometers.estimated_diameter_max} Km`;
       const hazardous = document.querySelector("#hazardous");
-      hazardous.innerHTML = `Was he hazardous : ${
+      hazardous.innerHTML = `Was he hazardous ? ${
         dictionnaire[
           asteroides.near_earth_objects[dateToString][0]
             .is_potentially_hazardous_asteroid
@@ -82,7 +83,7 @@ function fetchAsteroides() {
         ]
       }`;
       const distance = document.querySelector("#distance");
-      distance.innerHTML = `His missdistance : ${asteroides.near_earth_objects[dateToString][0].close_approach_data[0].miss_distance.kilometers} Km`;
+      distance.innerHTML = `His miss distance : ${asteroides.near_earth_objects[dateToString][0].close_approach_data[0].miss_distance.kilometers} Km`;
       const vitesse = document.querySelector("#vitesse");
       vitesse.innerHTML = `His velocity : ${asteroides.near_earth_objects[dateToString][0].close_approach_data[0].relative_velocity.kilometers_per_hour} Km/hour`;
     });
@@ -106,3 +107,29 @@ function addTitreNEO() {
   let currentDiv = document.getElementById("APOD");
   currentDiv.after(newTitre);
 }
+
+
+// Faire apparaître les blocs d'infos seulement après avoir saisi la date
+function hideAsteroidDescription() {
+  let divDescription = document.getElementById("description");
+  divDescription.style.setProperty("display", "block");
+  let divEarth = document.getElementById("earth");
+  divEarth.style.setProperty("margin-left", "auto");
+}
+
+
+//Faire apparaître les infos de l'astéroïde au survol
+
+  /*Hazardous*/
+let hazardous = document.getElementById("hazardous");
+let infoHazardous = document.getElementById("infoHazardous");
+
+hazardous.addEventListener("mouseover", () => {infoHazardous.style.display = "block";});
+hazardous.addEventListener("mouseout", () => {infoHazardous.style.display = "none";});
+
+  /*Miss distance*/
+let distance = document.getElementById("distance");
+let infoDistance = document.getElementById("infoDistance");
+  
+distance.addEventListener("mouseover", () => {infoDistance.style.display = "block";});
+distance.addEventListener("mouseout", () => {infoDistance.style.display = "none";});

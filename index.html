@@ -5,11 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&family=Poppins:wght@300&display=swap" rel="stylesheet">
     <title>AsteAstro</title>
   </head>
 
   <body>
-    <h1>Asté Astro</h1>
+    <h1>Asté Astro <span><img id="planete" src="/images/exploding-planet-with-transparent-background-psd-415168.png"></span></h1>
+    <hr>
 
     <!-- Saisir la date -->
     <div id="input"><input type="date" id="date" /></div>
@@ -18,9 +22,9 @@
     <section id="APOD">
       <div class="content">
         <div class="image"><img id="photo" /></div>
-        <div class="description">
+        <div class="content-picture">
           <h3 id="title"></h3>
-          <p id="description"></p>
+          <p id="description-picture"></p>
         </div>
       </div>
     </section>
@@ -45,11 +49,13 @@
 
         <!-- Informations asteroides-->
 
-        <div class="description">
+        <div id="description">
           <p id="nom"></p>
           <p id="hazardous"></p>
+            <p id="infoHazardous" class="hide">The celestial object is categorized as "hazardous" by NASA when it is potentially dangerous.</p>
           <p id="sentry"></p>
           <p id="distance"></p>
+            <p id="infoDistance" class="hide">The distance value of the celestial object from the earth.</p>
           <p id="diametre_min"></p>
           <p id="diametre_max"></p>
           <p id="vitesse"></p>

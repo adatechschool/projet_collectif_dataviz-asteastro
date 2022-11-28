@@ -1,27 +1,57 @@
 body {
   background-image: url("/images/andy-holmes-rCbdp8VCYhQ-unsplash.jpg");
   background-size: auto;
-}
-
-h1,
-h2,
-div,
-p {
   font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
 }
 
 h1 {
+  position: relative;
   color: white;
   text-align: center;
-  font-size: 6vw;
+  font-family: 'Poppins', sans-serif;
+  font-size: 175px;
+  right: -85px;
+}
+
+#planete {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  right: 175px;
+  top: 30px;
+}
+
+hr {
+  position: relative;
+  top: -130px;
+  border: 0;
+  height: 3px;
+  width: 500px;
+  background-color: red;
 }
 
 h2 {
   color: white;
   text-align: center;
-  font-size: 2vw;
+  font-size: 3vw;
   margin-top: 80px;
+  font-family: 'Poppins', sans-serif;
 }
+
+
+/* DATE */
+
+input {
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+#input {
+  text-align: center;
+}
+
+
+/* PHOTO DU JOUR */
 
 #APOD {
   text-align: center;
@@ -32,21 +62,63 @@ p {
   line-height: 24px;
 }
 
-.description {
-  padding: 5px;
-  max-width: 700px;
-  margin: auto;
-}
+
+/* ASTEROIDE DU JOUR */
 
 #NEO {
   padding: 5px;
+  /*margin: auto;*/
+}
+
+#NEO .content{
+  margin-top: 20px;
+}
+
+/* BLOCS DE CONTENU */
+
+.content {
+  display: flex;
+  flex-direction: row;
+  /*justify-content: center;*/
+  align-items: flex-start;
+  flex-wrap: wrap;
+  /*margin-top: 25px;*/
+  padding: 14px;
   margin: auto;
 }
 
-.description p {
+.content h3 {
+  color: aliceblue;
+  text-align: left;
+}
+
+.content-picture {
+  padding: 5px;
+  max-width: 700px;
+  margin: 0 auto; /*pas de marge verticale*/
+}
+
+#description {
+  padding: 5px;
+  max-width: 700px;
+  margin: 0 auto; /*pas de marge verticale*/
+  display: none;
+}
+
+#description p {
   background-color: rgba(0, 0, 0, 0.6);
   text-align: left;
-  padding: 14px;
+  padding: 10px;
+  margin: 0; /*pour que la description soit "collée" dessous*/
+  margin-top: 15px;
+}
+
+.content-picture p {
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: left;
+  padding: 10px;
+  margin: 0; /*pour que la description soit "collée" dessous*/
+  margin-top: 15px;
 }
 
 .content img {
@@ -58,37 +130,16 @@ p {
   margin: auto;
 }
 
-.content {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 25px;
-  padding: 14px;
-  text-align: center;
-  margin: auto;
-}
 
-.content h3 {
-  color: aliceblue;
-  text-align: left;
-}
+/* TERRE ET ASTEROIDES */
 
-input {
-  font-size: 25px;
-  margin-bottom: 25px;
-}
-
-#input {
-  text-align: center;
-}
 #earth {
   position: relative;
   height: 400px;
   width: 400px;
-  margin-top: 175px;
-  margin-bottom: 180px;
-  margin-left: auto;
+  margin-top: 50px;
+  margin-bottom: 300px;
+  margin: 0 auto; /*pas de marge verticale*/
   background-image: url(/images/terre.png);
   background-size: 400px;
   overflow: visible;
@@ -96,8 +147,8 @@ input {
 
 #moonContainer {
   position: absolute;
-  top: -60px;
-  left: -128px;
+  top: -20px;
+  left: -85px;
   width: 600px;
   height: 506px;
   /*border: 2px solid white;*/
@@ -144,8 +195,8 @@ input {
 
 #moonContainer2 {
   position: absolute;
-  top: -75px;
-  left: -100px;
+  top: -15px;
+  left: -120px;
   width: 600px;
   height: 456px;
   /*border: 2px solid white;*/
@@ -170,4 +221,18 @@ input {
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   -webkit-animation-duration: 10s;
+}
+
+
+/* INFOS ASTEROIDES */
+
+#description .hide{
+  display: none;
+  background-color: rgba(255, 255, 255, 0.75);
+  color: black;
+  font-style: italic;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 0;
+  max-width: 305px;
 }
