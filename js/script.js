@@ -120,6 +120,13 @@ function hideAsteroidDescription() {
 
 //Faire apparaître les infos de l'astéroïde au survol
 
+  /*Le Nom*/
+let nom = document.getElementById("nom");
+let infoNom = document.getElementById("infoNom");
+
+nom.addEventListener("mouseover", () => {infoNom.style.display = "block";});
+nom.addEventListener("mouseout", () => {infoNom.style.display = "none";});
+
   /*Hazardous*/
 let hazardous = document.getElementById("hazardous");
 let infoHazardous = document.getElementById("infoHazardous");
@@ -127,9 +134,40 @@ let infoHazardous = document.getElementById("infoHazardous");
 hazardous.addEventListener("mouseover", () => {infoHazardous.style.display = "block";});
 hazardous.addEventListener("mouseout", () => {infoHazardous.style.display = "none";});
 
+  /*Sentry*/
+let sentry = document.getElementById("sentry");
+let infoSentry = document.getElementById("InfoSentry");
+
+sentry.addEventListener("mouseover", () => {infoSentry.style.display = "block";});
+sentry.addEventListener("mouseout", () => {infoSentry.style.display = "none";});
+
   /*Miss distance*/
 let distance = document.getElementById("distance");
 let infoDistance = document.getElementById("infoDistance");
   
 distance.addEventListener("mouseover", () => {infoDistance.style.display = "block";});
 distance.addEventListener("mouseout", () => {infoDistance.style.display = "none";});
+
+  /*Minimum diameter*/
+let diametre_min = document.getElementById("diametre_min");
+let InfoDiametreMin = document.getElementById("InfoDiametreMin");
+    
+diametre_min.addEventListener("mouseover", () => {InfoDiametreMin.style.display = "block";});
+diametre_min.addEventListener("mouseout", () => {InfoDiametreMin.style.display = "none";});
+
+  /*Maximum diameter*/
+let diametre_max = document.getElementById("diametre_max");
+let InfoDiametreMax = document.getElementById("InfoDiametreMax");
+      
+diametre_max.addEventListener("mouseover", () => {InfoDiametreMax.style.display = "block";});
+diametre_max.addEventListener("mouseout", () => {InfoDiametreMax.style.display = "none";});
+
+  /*Velocity*/
+let vitesse = document.getElementById("vitesse");
+let InfoVitesse = document.getElementById("InfoVitesse");
+      
+vitesse.addEventListener("mouseover", () => {InfoVitesse.style.display = "block";});
+vitesse.addEventListener("mouseout", () => {InfoVitesse.style.display = "none";});
+
+
+
