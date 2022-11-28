@@ -1,16 +1,21 @@
-body {
+html {
+  height: 100%;
+  margin: 0;
   background-image: url("/images/andy-holmes-rCbdp8VCYhQ-unsplash.jpg");
   background-size: auto;
-  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+  background-repeat: no-repeat;
+  font-family: "Poppins", sans-serif, Verdana, sans-serif;
 }
 
 h1 {
   position: relative;
   color: white;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 175px;
+  font-size: lighter;
   right: -85px;
+  margin-bottom: 60px;
 }
 
 #planete {
@@ -19,15 +24,16 @@ h1 {
   width: 150px;
   right: 175px;
   top: 30px;
+  filter: hue-rotate(260deg);
 }
 
 hr {
   position: relative;
-  top: -130px;
+  top: -60px;
   border: 0;
   height: 3px;
   width: 500px;
-  background-color: red;
+  background-color: white;
 }
 
 h2 {
@@ -35,22 +41,33 @@ h2 {
   text-align: center;
   font-size: 3vw;
   margin-top: 80px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-
 
 /* DATE */
 
 input {
   font-size: 25px;
   margin-bottom: 25px;
+  margin-top: 25px;
 }
 
 #input {
   text-align: center;
 }
 
+/*INTRO*/
+.introduction {
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
+  font-size: 25px;
+  background-color: #122744;
+}
 
+.introduction p {
+  line-height: 30px;
+}
 /* PHOTO DU JOUR */
 
 #APOD {
@@ -62,7 +79,6 @@ p {
   line-height: 24px;
 }
 
-
 /* ASTEROIDE DU JOUR */
 
 #NEO {
@@ -70,7 +86,7 @@ p {
   /*margin: auto;*/
 }
 
-#NEO .content{
+#NEO .content {
   margin-top: 20px;
 }
 
@@ -123,13 +139,13 @@ p {
 
 .content img {
   max-width: 700px;
+  max-height: 700px;
 }
 
 .image {
   justify-content: center;
   margin: auto;
 }
-
 
 /* TERRE ET ASTEROIDES */
 
@@ -223,10 +239,9 @@ p {
   -webkit-animation-duration: 10s;
 }
 
-
 /* INFOS ASTEROIDES */
 
-#description .hide{
+#description .hide {
   display: none;
   background-color: rgba(255, 255, 255, 0.75);
   color: black;
