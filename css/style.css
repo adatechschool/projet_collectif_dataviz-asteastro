@@ -23,7 +23,7 @@ h2 {
   margin-top: 80px;
 }
 
-.APOD {
+#APOD {
   text-align: center;
 }
 
@@ -38,7 +38,7 @@ p {
   margin: auto;
 }
 
-.NEO {
+#NEO {
   padding: 5px;
   margin: auto;
 }
@@ -79,7 +79,7 @@ input {
   margin-bottom: 25px;
 }
 
-.input {
+#input {
   text-align: center;
 }
 #earth {

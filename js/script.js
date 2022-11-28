@@ -6,6 +6,8 @@ const url =
 //Afficher l'image uniquement lorsqu'une date est sélectionnée
 document.getElementById("date").oninput = function () {
   fetchData();
+  addTitreAPOD();
+  addTitreNEO();
   // datePlus7();
 };
 document.getElementById("earth").onclick = function () {
@@ -84,4 +86,23 @@ function fetchAsteroides() {
       const vitesse = document.querySelector("#vitesse");
       vitesse.innerHTML = `His velocity : ${asteroides.near_earth_objects[dateToString][0].close_approach_data[0].relative_velocity.kilometers_per_hour} Km/hour`;
     });
+}
+
+// Créer les éléments HTML
+function addTitreAPOD() {
+  let newTitre = document.createElement("h2");
+  let newContent = document.createTextNode("Picture of the Day");
+  newTitre.appendChild(newContent);
+  console.log(newTitre);
+  let currentDiv = document.getElementById("input");
+  currentDiv.after(newTitre);
+}
+
+function addTitreNEO() {
+  let newTitre = document.createElement("h2");
+  let newContent = document.createTextNode("Asteroid of the Day");
+  newTitre.appendChild(newContent);
+  console.log(newTitre);
+  let currentDiv = document.getElementById("APOD");
+  currentDiv.after(newTitre);
 }
