@@ -205,11 +205,3 @@ vitesse.addEventListener("mouseover", () => {
 vitesse.addEventListener("mouseout", () => {
   InfoVitesse.style.display = "none";
 });
-
-// function deleteTitle() {
-//    {
-//     for (let i = 0; i < oldTitle.length; i++) {
-//       oldTitle[i].remove();
-//     }
-//   }
-// }
