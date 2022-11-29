@@ -5,9 +5,13 @@ const url =
 document.getElementById("date").oninput = function () {
   fetchData();
   hidePictureDescription();
-  addTitreAPOD();
-  addSousTitreNEO();
-  addTitreNEO();
+  let oldTitleh2 = document.getElementsByTagName("h2");
+
+  if (oldTitleh2.length === 0) {
+    addTitreAPOD();
+    addSousTitreNEO();
+    addTitreNEO();
+  }
 };
 
 document.getElementById("earth").onclick = function () {
@@ -201,3 +205,11 @@ vitesse.addEventListener("mouseover", () => {
 vitesse.addEventListener("mouseout", () => {
   InfoVitesse.style.display = "none";
 });
+
+// function deleteTitle() {
+//    {
+//     for (let i = 0; i < oldTitle.length; i++) {
+//       oldTitle[i].remove();
+//     }
+//   }
+// }
