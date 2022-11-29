@@ -2,8 +2,8 @@ html {
   height: 100%;
   margin: 0;
   background-image: url("/images/andy-holmes-rCbdp8VCYhQ-unsplash.jpg");
-  background-size: auto;
-  background-repeat: no-repeat;
+  background-size:auto;
+  /*background-repeat: no-repeat*/;
   font-family: "Poppins", sans-serif, Verdana, sans-serif;
 }
 
@@ -24,7 +24,7 @@ h1 {
   width: 150px;
   right: 175px;
   top: 30px;
-  filter: hue-rotate(260deg);
+  filter: hue-rotate(250deg);
 }
 
 hr {
@@ -56,18 +56,26 @@ input {
   text-align: center;
 }
 
+
 /*INTRO*/
+
 .introduction {
   text-align: center;
   max-width: 500px;
   margin: auto;
   font-size: 25px;
-  background-color: #122744;
+  background-color: #7E76B0;
+  opacity: 0.8;
+  padding: 12px;
+  border-radius: 20%;
+  margin-bottom: 25px;
 }
 
 .introduction p {
   line-height: 30px;
 }
+
+
 /* PHOTO DU JOUR */
 
 #APOD {
@@ -90,6 +98,15 @@ p {
   margin-top: 20px;
 }
 
+#NEO #description{
+  width: 400px;
+}
+
+#NEO ul, li{
+  margin-left: 20px;
+  padding-left: 10px;
+}
+
 /* BLOCS DE CONTENU */
 
 .content {
@@ -106,6 +123,7 @@ p {
 .content h3 {
   color: aliceblue;
   text-align: left;
+  margin: 0;
 }
 
 .content-picture {
@@ -249,5 +267,5 @@ p {
   padding-top: 5px;
   padding-bottom: 5px;
   margin: 0;
-  max-width: 305px;
+  max-width: 400px;
 }

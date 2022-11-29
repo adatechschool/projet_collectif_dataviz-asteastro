@@ -23,17 +23,26 @@
           src="/images/exploding-planet-with-transparent-background-psd-415168.png"
       /></span>
     </h1>
+
     <hr />
+
     <div class="introduction">
       <p>
-        Bienvenue sur le site Asté Astro ! Il vous permet pour une date donnée
-        de découvrir la photo astronomique du jour ainsi que l’astéroide le plus
-        proche de la terre, grâce aux informations fournies par la NASA.
+        &#128640; Bienvenue sur le site Asté Astro ! <br />Il vous permet pour
+        une date donnée de découvrir la photo astronomique du jour ainsi que
+        l’astéroide le plus proche de la terre, grâce aux informations fournies
+        par la NASA.
       </p>
     </div>
 
     <!-- Saisir la date -->
     <div id="input"><input type="date" id="date" /></div>
+        <!--
+          Saisir la date 
+        <a href="#APOD" id="goToAPOD" >
+          <div id="input"><input type="date" id="date" /></div>
+        </a>
+        -->
 
     <!-- Photo du jour -->
     <section id="APOD">
@@ -68,20 +77,21 @@
 
         <div id="description">
           <p id="nom"></p>
-          <p id="infoNom" class="hide">
-            The asteroïd's name is composed by multiples elements : -The year it
-            was discovered. -Followed by 2 letters that come from the discovery
-            of the object during the year : 1-15 january will get AA, AB, AC
-            etc. 16-31 january will get BA, BB, BC etc. To finally between 16-31
-            December get YA, YB, YC etc. For example an astéroïd named 1992 KD
-            is the 4th discovered in the second half of may 1992. Asteroïds can
-            also have moons that gets provisional names.
-          </p>
+          
+            <ul id="infoNom" class="hide">The asteroïd's name is composed by two elements :
+              <li>The year it was discovered.</li>
+              <li>Followed by 2 letters that come from the discovery of the object during the year :
+                1-15 january will get AA, AB, AC etc., 16-31 january will get BA, BB, BC etc.,
+                to finally get YA, YB, YC etc. between 16-31 December.</li>
+              <br>
+                For example an astéroïd named 1992 KD is the 4th discovered
+                in the second half of may 1992.
+            </ul>
+          
           <p id="hazardous"></p>
           <p id="infoHazardous" class="hide">
-            A potentially hzardous object (PHO) is a near earth object, either
-            an asteroid or a comet, with an orbit that can make close approaches
-            to the Earth and is large enough to cause significant regional
+            A potentially hazardous object (PHO) is either an asteroid or a comet,
+            with an orbit that is large enough to cause significant regional
             damage in the event of Impact.
           </p>
           <p id="sentry"></p>

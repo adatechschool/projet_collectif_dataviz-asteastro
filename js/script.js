@@ -8,6 +8,7 @@ document.getElementById("date").oninput = function () {
   fetchData();
   addTitreAPOD();
   addTitreNEO();
+  //goToAPOD()
   // datePlus7();
 };
 document.getElementById("earth").onclick = function () {
@@ -117,6 +118,12 @@ function hideAsteroidDescription() {
   divEarth.style.setProperty("margin-left", "auto");
 }
 
+/*
+//Ancre : aller à la section APOD au clic sur la date
+function goToAPOD() {
+  document.getElementById("goToAPOD").href = "#APOD";
+}
+*/
 
 //Faire apparaître les infos de l'astéroïde au survol
 
