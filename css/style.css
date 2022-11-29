@@ -2,8 +2,8 @@ html {
   height: 100%;
   margin: 0;
   background-image: url("/images/andy-holmes-rCbdp8VCYhQ-unsplash.jpg");
-  background-size:auto;
-  /*background-repeat: no-repeat*/;
+  background-size: auto;
+  /*background-repeat: no-repeat*/
   font-family: "Poppins", sans-serif, Verdana, sans-serif;
 }
 
@@ -44,7 +44,6 @@ h2 {
   font-family: "Poppins", sans-serif;
 }
 
-
 /*IMAGES*/
 
 #trounoir {
@@ -83,7 +82,6 @@ h2 {
   right: 235px;
 }
 
-
 /*INTRO*/
 
 .introduction {
@@ -91,7 +89,7 @@ h2 {
   max-width: 500px;
   margin: auto;
   font-size: 25px;
-  background-color: #7E76B0;
+  background-color: #7e76b0;
   opacity: 0.8;
   padding: 12px;
   border-radius: 20%;
@@ -102,13 +100,16 @@ h2 {
   line-height: 30px;
 }
 
-
 /* DATE */
 
 input {
   font-size: 25px;
   margin-bottom: 25px;
   margin-top: 25px;
+}
+
+a:link {
+  text-decoration: none;
 }
 
 #input {
@@ -122,7 +123,6 @@ input {
   font-weight: bold;
 }
 
-
 /* PHOTO DU JOUR */
 
 #APOD {
@@ -133,7 +133,6 @@ p {
   color: white;
   line-height: 24px;
 }
-
 
 /* ASTEROIDE DU JOUR */
 
@@ -146,11 +145,12 @@ p {
   margin-top: 20px;
 }
 
-#NEO #description{
+#NEO #description {
   width: 400px;
 }
 
-#NEO ul, li{
+#NEO ul,
+li {
   margin-left: 20px;
   padding-left: 10px;
 }
@@ -160,14 +160,13 @@ h4 {
   max-width: 500px;
   margin: auto;
   font-size: 15px;
-  background-color: #7E76B0;
+  background-color: #7e76b0;
   color: white;
   opacity: 0.9;
   padding: 12px;
   border-radius: 20%;
   margin-bottom: 35px;
 }
-
 
 /* BLOCS DE CONTENU */
 
@@ -188,10 +187,11 @@ h4 {
   margin: 0;
 }
 
-.content-picture {
+#content-picture {
   padding: 5px;
   max-width: 700px;
   margin: 0 auto; /*pas de marge verticale*/
+  display: none;
 }
 
 #description {
@@ -209,7 +209,7 @@ h4 {
   margin-top: 15px;
 }
 
-.content-picture p {
+#content-picture p {
   background-color: rgba(0, 0, 0, 0.65);
   text-align: left;
   padding: 10px;
@@ -338,11 +338,8 @@ h4 {
   width: 20px;
 }
 
-
-
 /*ne s'exécute que quand la largeur d'écran est <= 1100px*/
-@media screen and (max-width:1100px)
-{
+@media screen and (max-width: 1100px) {
   h1 {
     font-size: 115px;
     right: -75px;
@@ -379,8 +376,7 @@ h4 {
 }
 
 /*ne s'exécute que quand la largeur d'écran est <= 760px*/
-@media screen and (max-width:760px)
-{
+@media screen and (max-width: 760px) {
   h1 {
     font-size: 70px;
     right: -45px;

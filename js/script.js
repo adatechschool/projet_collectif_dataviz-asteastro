@@ -4,10 +4,10 @@ const url =
 //Afficher l'image uniquement lorsqu'une date est sélectionnée
 document.getElementById("date").oninput = function () {
   fetchData();
+  hidePictureDescription();
   addTitreAPOD();
   addSousTitreNEO();
   addTitreNEO();
-  // datePlus7();
 };
 
 document.getElementById("earth").onclick = function () {
@@ -15,13 +15,11 @@ document.getElementById("earth").onclick = function () {
   hideAsteroidDescription();
 };
 
-
 //Récupérer la date saisie
 function dateSaisie() {
   const saisie = document.getElementById("date").value;
   return saisie;
 }
-
 
 //Afficher l'image du jour (API APOD)
 function fetchData() {
@@ -40,18 +38,6 @@ function fetchData() {
     });
 }
 
-
-//Récupérer la date saisie + 7 jours
-// function datePlus7() {
-//   let dateArray = dateSaisie().split("-");
-//   let daysPlusSept = parseInt(dateArray[2]) + 4;
-//   console.log(daysPlusSept);
-//   let datePlusSept = dateArray[0] + "-" + dateArray[1] + "-" + daysPlusSept;
-//   console.log(datePlusSept);
-//   return datePlusSept;
-// }
-
-
 //Afficher les astéroides (API NeoWS)
 const startURL = "https://api.nasa.gov/neo/rest/v1/feed?start_date=";
 const endURL = "&api_key=byMXZRYPDymQvCcgAEarTFUmCZVtf4OXrnRu5UPY";
@@ -69,7 +55,7 @@ function fetchAsteroides() {
         false: "No",
         true: "Yes",
       };
-      name.innerHTML =  `<span><img src="/images/fleche.png"/></span> His name : ${asteroides.near_earth_objects[dateToString][0].name}`;
+      name.innerHTML = `<span><img src="/images/fleche.png"/></span> His name : ${asteroides.near_earth_objects[dateToString][0].name}`;
       const diameter_min = document.querySelector("#diametre_min");
       diameter_min.innerHTML = `<span><img src="/images/fleche.png"/></span> His minimum diameter : ${asteroides.near_earth_objects[dateToString][0].estimated_diameter.kilometers.estimated_diameter_min} Km`;
       const diameter_max = document.querySelector("#diametre_max");
@@ -94,7 +80,6 @@ function fetchAsteroides() {
     });
 }
 
-
 // Créer les éléments HTML
 function addTitreAPOD() {
   let newTitre = document.createElement("h2");
@@ -116,13 +101,14 @@ function addTitreNEO() {
 
 function addSousTitreNEO() {
   let newTitre = document.createElement("h4");
-  let newContent = document.createTextNode("Clique sur la Terre pour découvrir l'astéroïde du jour !");
+  let newContent = document.createTextNode(
+    "Clique sur la Terre pour découvrir l'astéroïde du jour !"
+  );
   newTitre.appendChild(newContent);
   console.log(newTitre);
   let currentDiv = document.getElementById("APOD");
   currentDiv.after(newTitre);
 }
-
 
 // Faire apparaître les blocs d'infos seulement après avoir saisi la date
 function hideAsteroidDescription() {
@@ -132,57 +118,86 @@ function hideAsteroidDescription() {
   divEarth.style.setProperty("margin-left", "auto");
 }
 
+function hidePictureDescription() {
+  let pictureDescription = document.getElementById("content-picture");
+  pictureDescription.style.setProperty("display", "block");
+}
 
 //Faire apparaître les infos de l'astéroïde au survol
 
-  /*Le Nom*/
+/*Le Nom*/
 let nom = document.getElementById("nom");
 let infoNom = document.getElementById("infoNom");
 
-nom.addEventListener("mouseover", () => {infoNom.style.display = "block";});
-nom.addEventListener("mouseout", () => {infoNom.style.display = "none";});
+nom.addEventListener("mouseover", () => {
+  infoNom.style.display = "block";
+});
+nom.addEventListener("mouseout", () => {
+  infoNom.style.display = "none";
+});
 
-  /*Hazardous*/
+/*Hazardous*/
 let hazardous = document.getElementById("hazardous");
 let infoHazardous = document.getElementById("infoHazardous");
 
-hazardous.addEventListener("mouseover", () => {infoHazardous.style.display = "block";});
-hazardous.addEventListener("mouseout", () => {infoHazardous.style.display = "none";});
+hazardous.addEventListener("mouseover", () => {
+  infoHazardous.style.display = "block";
+});
+hazardous.addEventListener("mouseout", () => {
+  infoHazardous.style.display = "none";
+});
 
-  /*Sentry*/
+/*Sentry*/
 let sentry = document.getElementById("sentry");
 let infoSentry = document.getElementById("InfoSentry");
 
-sentry.addEventListener("mouseover", () => {infoSentry.style.display = "block";});
-sentry.addEventListener("mouseout", () => {infoSentry.style.display = "none";});
+sentry.addEventListener("mouseover", () => {
+  infoSentry.style.display = "block";
+});
+sentry.addEventListener("mouseout", () => {
+  infoSentry.style.display = "none";
+});
 
-  /*Miss distance*/
+/*Miss distance*/
 let distance = document.getElementById("distance");
 let infoDistance = document.getElementById("infoDistance");
-  
-distance.addEventListener("mouseover", () => {infoDistance.style.display = "block";});
-distance.addEventListener("mouseout", () => {infoDistance.style.display = "none";});
 
-  /*Minimum diameter*/
+distance.addEventListener("mouseover", () => {
+  infoDistance.style.display = "block";
+});
+distance.addEventListener("mouseout", () => {
+  infoDistance.style.display = "none";
+});
+
+/*Minimum diameter*/
 let diametre_min = document.getElementById("diametre_min");
 let InfoDiametreMin = document.getElementById("InfoDiametreMin");
-    
-diametre_min.addEventListener("mouseover", () => {InfoDiametreMin.style.display = "block";});
-diametre_min.addEventListener("mouseout", () => {InfoDiametreMin.style.display = "none";});
 
-  /*Maximum diameter*/
+diametre_min.addEventListener("mouseover", () => {
+  InfoDiametreMin.style.display = "block";
+});
+diametre_min.addEventListener("mouseout", () => {
+  InfoDiametreMin.style.display = "none";
+});
+
+/*Maximum diameter*/
 let diametre_max = document.getElementById("diametre_max");
 let InfoDiametreMax = document.getElementById("InfoDiametreMax");
-      
-diametre_max.addEventListener("mouseover", () => {InfoDiametreMax.style.display = "block";});
-diametre_max.addEventListener("mouseout", () => {InfoDiametreMax.style.display = "none";});
 
-  /*Velocity*/
+diametre_max.addEventListener("mouseover", () => {
+  InfoDiametreMax.style.display = "block";
+});
+diametre_max.addEventListener("mouseout", () => {
+  InfoDiametreMax.style.display = "none";
+});
+
+/*Velocity*/
 let vitesse = document.getElementById("vitesse");
 let InfoVitesse = document.getElementById("InfoVitesse");
-      
-vitesse.addEventListener("mouseover", () => {InfoVitesse.style.display = "block";});
-vitesse.addEventListener("mouseout", () => {InfoVitesse.style.display = "none";});
 
-
-
+vitesse.addEventListener("mouseover", () => {
+  InfoVitesse.style.display = "block";
+});
+vitesse.addEventListener("mouseout", () => {
+  InfoVitesse.style.display = "none";
+});

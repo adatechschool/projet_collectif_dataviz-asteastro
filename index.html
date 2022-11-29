@@ -15,7 +15,6 @@
   </head>
 
   <body>
-
     <!-- En-tête -->
     <h1>
       Asté Astro
@@ -37,29 +36,32 @@
       </p>
     </div>
 
-
     <!-- Images de déco -->
-    <img id="trounoir" src="/images/Black-Hole-PNG-Transparent-Image.png">
-    <img id="fullscreen" src="/images/fullscreen_FILL0_wght400_GRAD0_opsz48.png">
-    <img id="share" src="/images/share_FILL0_wght400_GRAD0_opsz48.png">
-    <img id="mail" src="/images/mail_FILL0_wght400_GRAD0_opsz48.png">
-    <img id="rocket" src="/images/rocket_launch_FILL0_wght400_GRAD0_opsz48.png">
+    <img id="trounoir" src="/images/Black-Hole-PNG-Transparent-Image.png" />
+    <img
+      id="fullscreen"
+      src="/images/fullscreen_FILL0_wght400_GRAD0_opsz48.png"
+    />
+    <img id="share" src="/images/share_FILL0_wght400_GRAD0_opsz48.png" />
+    <img id="mail" src="/images/mail_FILL0_wght400_GRAD0_opsz48.png" />
+    <img
+      id="rocket"
+      src="/images/rocket_launch_FILL0_wght400_GRAD0_opsz48.png"
+    />
 
-        
     <!-- Saisir la date puis aller directement à la section APOD -->
-      <a href="#APOD" id="goToAPOD" >
-        <div id="input">
-          <label>Entre une date </label>
-          <input type="date" id="date" onchange="window.location.href='#APOD'" />
-        </div>
-      </a>
-        
+    <a href="#APOD" id="goToAPOD">
+      <div id="input">
+        <label>Entre une date </label>
+        <input type="date" id="date" onchange="window.location.href='#APOD'" />
+      </div>
+    </a>
 
     <!-- Photo du jour -->
     <section id="APOD">
       <div class="content">
         <div class="image"><img id="photo" /></div>
-        <div class="content-picture">
+        <div id="content-picture">
           <h3 id="title"></h3>
           <p id="description-picture"></p>
         </div>
@@ -88,22 +90,26 @@
 
         <div id="description">
           <p id="nom"></p>
-          
-            <ul id="infoNom" class="hide">The asteroïd's name is composed by two elements :
-              <li>The year it was discovered.</li>
-              <li>Followed by 2 letters that come from the discovery of the object during the year :
-                1-15 january will get AA, AB, AC etc., 16-31 january will get BA, BB, BC etc.,
-                to finally get YA, YB, YC etc. between 16-31 December.</li>
-              <br>
-                For example an astéroïd named 1992 KD is the 4th discovered
-                in the second half of may 1992.
-            </ul>
-          
+
+          <ul id="infoNom" class="hide">
+            The asteroïd's name is composed by two elements :
+            <li>The year it was discovered.</li>
+            <li>
+              Followed by 2 letters that come from the discovery of the object
+              during the year : 1-15 january will get AA, AB, AC etc., 16-31
+              january will get BA, BB, BC etc., to finally get YA, YB, YC etc.
+              between 16-31 December.
+            </li>
+            <br />
+            For example an astéroïd named 1992 KD is the 4th discovered in the
+            second half of may 1992.
+          </ul>
+
           <p id="hazardous"></p>
           <p id="infoHazardous" class="hide">
-            A potentially hazardous object (PHO) is either an asteroid or a comet,
-            with an orbit that is large enough to cause significant regional
-            damage in the event of Impact.
+            A potentially hazardous object (PHO) is either an asteroid or a
+            comet, with an orbit that is large enough to cause significant
+            regional damage in the event of Impact.
           </p>
           <p id="sentry"></p>
           <p id="InfoSentry" class="hide">
