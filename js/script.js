@@ -1,5 +1,3 @@
-// import fetch from 'node-fetch';
-
 const url =
   "https://api.nasa.gov/planetary/apod?api_key=byMXZRYPDymQvCcgAEarTFUmCZVtf4OXrnRu5UPY&date=";
 
@@ -7,20 +5,23 @@ const url =
 document.getElementById("date").oninput = function () {
   fetchData();
   addTitreAPOD();
+  addSousTitreNEO();
   addTitreNEO();
-  //goToAPOD()
   // datePlus7();
 };
+
 document.getElementById("earth").onclick = function () {
   fetchAsteroides();
   hideAsteroidDescription();
 };
+
 
 //Récupérer la date saisie
 function dateSaisie() {
   const saisie = document.getElementById("date").value;
   return saisie;
 }
+
 
 //Afficher l'image du jour (API APOD)
 function fetchData() {
@@ -38,9 +39,7 @@ function fetchData() {
       description.innerHTML = nasaData.explanation;
     });
 }
-//Afficher les astéroides (API NeoWS)
-const startURL = "https://api.nasa.gov/neo/rest/v1/feed?start_date=";
-const endURL = "&api_key=byMXZRYPDymQvCcgAEarTFUmCZVtf4OXrnRu5UPY";
+
 
 //Récupérer la date saisie + 7 jours
 // function datePlus7() {
@@ -51,6 +50,11 @@ const endURL = "&api_key=byMXZRYPDymQvCcgAEarTFUmCZVtf4OXrnRu5UPY";
 //   console.log(datePlusSept);
 //   return datePlusSept;
 // }
+
+
+//Afficher les astéroides (API NeoWS)
+const startURL = "https://api.nasa.gov/neo/rest/v1/feed?start_date=";
+const endURL = "&api_key=byMXZRYPDymQvCcgAEarTFUmCZVtf4OXrnRu5UPY";
 
 function fetchAsteroides() {
   fetch(startURL + dateSaisie() + "&end_date=" + dateSaisie() + endURL)
@@ -65,30 +69,31 @@ function fetchAsteroides() {
         false: "No",
         true: "Yes",
       };
-      name.innerHTML = `His name : ${asteroides.near_earth_objects[dateToString][0].name}`;
+      name.innerHTML =  `<span><img src="/images/fleche.png"/></span> His name : ${asteroides.near_earth_objects[dateToString][0].name}`;
       const diameter_min = document.querySelector("#diametre_min");
-      diameter_min.innerHTML = `His minimum diameter : ${asteroides.near_earth_objects[dateToString][0].estimated_diameter.kilometers.estimated_diameter_min} Km`;
+      diameter_min.innerHTML = `<span><img src="/images/fleche.png"/></span> His minimum diameter : ${asteroides.near_earth_objects[dateToString][0].estimated_diameter.kilometers.estimated_diameter_min} Km`;
       const diameter_max = document.querySelector("#diametre_max");
-      diameter_max.innerHTML = `His maximum diameter : ${asteroides.near_earth_objects[dateToString][0].estimated_diameter.kilometers.estimated_diameter_max} Km`;
+      diameter_max.innerHTML = `<span><img src="/images/fleche.png"/></span> His maximum diameter : ${asteroides.near_earth_objects[dateToString][0].estimated_diameter.kilometers.estimated_diameter_max} Km`;
       const hazardous = document.querySelector("#hazardous");
-      hazardous.innerHTML = `Was he hazardous ? ${
+      hazardous.innerHTML = `<span><img src="/images/fleche.png"/></span> Was he hazardous ? ${
         dictionnaire[
           asteroides.near_earth_objects[dateToString][0]
             .is_potentially_hazardous_asteroid
         ]
       }`;
       const sentry = document.querySelector("#sentry");
-      sentry.innerHTML = `Was he sentry ? ${
+      sentry.innerHTML = `<span><img src="/images/fleche.png"/></span> Was he sentry ? ${
         dictionnaire[
           asteroides.near_earth_objects[dateToString][0].is_sentry_object
         ]
       }`;
       const distance = document.querySelector("#distance");
-      distance.innerHTML = `His miss distance : ${asteroides.near_earth_objects[dateToString][0].close_approach_data[0].miss_distance.kilometers} Km`;
+      distance.innerHTML = `<span><img src="/images/fleche.png"/></span> His miss distance : ${asteroides.near_earth_objects[dateToString][0].close_approach_data[0].miss_distance.kilometers} Km`;
       const vitesse = document.querySelector("#vitesse");
-      vitesse.innerHTML = `His velocity : ${asteroides.near_earth_objects[dateToString][0].close_approach_data[0].relative_velocity.kilometers_per_hour} Km/hour`;
+      vitesse.innerHTML = `<span><img src="/images/fleche.png"/></span> His velocity : ${asteroides.near_earth_objects[dateToString][0].close_approach_data[0].relative_velocity.kilometers_per_hour} Km/hour`;
     });
 }
+
 
 // Créer les éléments HTML
 function addTitreAPOD() {
@@ -109,6 +114,15 @@ function addTitreNEO() {
   currentDiv.after(newTitre);
 }
 
+function addSousTitreNEO() {
+  let newTitre = document.createElement("h4");
+  let newContent = document.createTextNode("Clique sur la Terre pour découvrir l'astéroïde du jour !");
+  newTitre.appendChild(newContent);
+  console.log(newTitre);
+  let currentDiv = document.getElementById("APOD");
+  currentDiv.after(newTitre);
+}
+
 
 // Faire apparaître les blocs d'infos seulement après avoir saisi la date
 function hideAsteroidDescription() {
@@ -118,12 +132,6 @@ function hideAsteroidDescription() {
   divEarth.style.setProperty("margin-left", "auto");
 }
 
-/*
-//Ancre : aller à la section APOD au clic sur la date
-function goToAPOD() {
-  document.getElementById("goToAPOD").href = "#APOD";
-}
-*/
 
 //Faire apparaître les infos de l'astéroïde au survol
 

@@ -15,6 +15,8 @@
   </head>
 
   <body>
+
+    <!-- En-tête -->
     <h1>
       Asté Astro
       <span
@@ -35,14 +37,23 @@
       </p>
     </div>
 
-    <!-- Saisir la date -->
-    <div id="input"><input type="date" id="date" /></div>
-        <!--
-          Saisir la date 
-        <a href="#APOD" id="goToAPOD" >
-          <div id="input"><input type="date" id="date" /></div>
-        </a>
-        -->
+
+    <!-- Images de déco -->
+    <img id="trounoir" src="/images/Black-Hole-PNG-Transparent-Image.png">
+    <img id="fullscreen" src="/images/fullscreen_FILL0_wght400_GRAD0_opsz48.png">
+    <img id="share" src="/images/share_FILL0_wght400_GRAD0_opsz48.png">
+    <img id="mail" src="/images/mail_FILL0_wght400_GRAD0_opsz48.png">
+    <img id="rocket" src="/images/rocket_launch_FILL0_wght400_GRAD0_opsz48.png">
+
+        
+    <!-- Saisir la date puis aller directement à la section APOD -->
+      <a href="#APOD" id="goToAPOD" >
+        <div id="input">
+          <label>Entre une date </label>
+          <input type="date" id="date" onchange="window.location.href='#APOD'" />
+        </div>
+      </a>
+        
 
     <!-- Photo du jour -->
     <section id="APOD">

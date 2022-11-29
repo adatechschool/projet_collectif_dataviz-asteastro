@@ -20,10 +20,10 @@ h1 {
 
 #planete {
   position: relative;
-  height: 150px;
-  width: 150px;
-  right: 175px;
-  top: 30px;
+  height: 170px;
+  width: 170px;
+  right: 185px;
+  top: 45px;
   filter: hue-rotate(250deg);
 }
 
@@ -39,21 +39,48 @@ hr {
 h2 {
   color: white;
   text-align: center;
-  font-size: 3vw;
+  font-size: 4vw;
   margin-top: 80px;
   font-family: "Poppins", sans-serif;
 }
 
-/* DATE */
 
-input {
-  font-size: 25px;
-  margin-bottom: 25px;
-  margin-top: 25px;
+/*IMAGES*/
+
+#trounoir {
+  position: absolute;
+  height: 400px;
+  left: -125px;
+  top: -125px;
+  z-index: -1;
 }
-
-#input {
-  text-align: center;
+#fullscreen {
+  position: absolute;
+  height: 50px;
+  filter: invert();
+  top: 10px;
+  right: 10px;
+}
+#share {
+  position: absolute;
+  height: 50px;
+  filter: invert();
+  top: 10px;
+  right: 85px;
+}
+#mail {
+  position: absolute;
+  height: 50px;
+  filter: invert();
+  top: 10px;
+  right: 160px;
+}
+#rocket {
+  position: absolute;
+  height: 50px;
+  filter: invert();
+  top: 10px;
+  right: 235px;
 }
 
 
@@ -76,6 +103,26 @@ input {
 }
 
 
+/* DATE */
+
+input {
+  font-size: 25px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+#input {
+  text-align: center;
+}
+
+#input label {
+  color: aliceblue;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
 /* PHOTO DU JOUR */
 
 #APOD {
@@ -86,6 +133,7 @@ p {
   color: white;
   line-height: 24px;
 }
+
 
 /* ASTEROIDE DU JOUR */
 
@@ -106,6 +154,20 @@ p {
   margin-left: 20px;
   padding-left: 10px;
 }
+
+h4 {
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
+  font-size: 15px;
+  background-color: #7E76B0;
+  color: white;
+  opacity: 0.9;
+  padding: 12px;
+  border-radius: 20%;
+  margin-bottom: 35px;
+}
+
 
 /* BLOCS DE CONTENU */
 
@@ -140,7 +202,7 @@ p {
 }
 
 #description p {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.65);
   text-align: left;
   padding: 10px;
   margin: 0; /*pour que la description soit "collée" dessous*/
@@ -148,7 +210,7 @@ p {
 }
 
 .content-picture p {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.65);
   text-align: left;
   padding: 10px;
   margin: 0; /*pour que la description soit "collée" dessous*/
@@ -261,11 +323,95 @@ p {
 
 #description .hide {
   display: none;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(247, 239, 255, 0.85);
   color: black;
   font-style: italic;
   padding-top: 5px;
   padding-bottom: 5px;
   margin: 0;
   max-width: 400px;
+}
+
+#description img {
+  filter: invert(1);
+  height: 20px;
+  width: 20px;
+}
+
+
+
+/*ne s'exécute que quand la largeur d'écran est <= 1100px*/
+@media screen and (max-width:1100px)
+{
+  h1 {
+    font-size: 115px;
+    right: -75px;
+  }
+  #planete {
+    height: 110px;
+    width: 110px;
+    right: 125px;
+    top: 28px;
+  }
+  hr {
+    top: -60px;
+  }
+  #fullscreen {
+    height: 40px;
+    top: 10px;
+    right: 5px;
+  }
+  #share {
+    height: 40px;
+    top: 10px;
+    right: 60px;
+  }
+  #mail {
+    height: 40px;
+    top: 10px;
+    right: 120px;
+  }
+  #rocket {
+    height: 40px;
+    top: 10px;
+    right: 180px;
+  }
+}
+
+/*ne s'exécute que quand la largeur d'écran est <= 760px*/
+@media screen and (max-width:760px)
+{
+  h1 {
+    font-size: 70px;
+    right: -45px;
+  }
+  #planete {
+    height: 70px;
+    width: 70px;
+    right: 75px;
+    top: 15px;
+  }
+  hr {
+    top: -60px;
+  }
+  #fullscreen {
+    height: 25px;
+    top: 5px;
+    right: 5px;
+  }
+  #share {
+    height: 25px;
+    top: 5px;
+    right: 40px;
+  }
+  #mail {
+    height: 25px;
+    top: 5px;
+    right: 75px;
+  }
+  #rocket {
+    height: 25px;
+    top: 5px;
+    right: 115px;
+  }
 }
