@@ -18,37 +18,41 @@
   <body>
 
     <!-- Mode Noël -->
-    <button id="modeNoel">Activer le mode Noël</button>
+    <button id="modeNoel">&#127876 Toggle to the Christmas Mode</button>
 
     <!-- En-tête -->
     <h1>
-      Asté Astro
-      <span
-        ><img
-          id="planete"
-          src="/images/exploding-planet-with-transparent-background-psd-415168.png"
-      /></span>
+    Asté Astro
+    <span>
+      <img
+        id="planete"
+        src="/images/exploding-planet-with-transparent-background-psd-415168.png"/>
+      </span>
     </h1>
 
     <hr />
 
-    <div class="introduction">
-      <p>
-        &#128640; Bienvenue sur le site Asté Astro ! <br />Il vous permet pour
-        une date donnée de découvrir la photo astronomique du jour ainsi que
-        l’astéroide le plus proche de la terre, grâce aux informations fournies
-        par la NASA.
-      </p>
+    <div id="tampon"></div>
+
+    <div id="guirlande">
+      <div class="introduction">
+        <p>
+          &#128640; Welcome to Asté Astro website! <br>
+          It allows you for a given date to discover the astronomical photo of the day
+          as well as the nearest object to the earth, thanks to information provided by NASA.
+        </p>
+      </div>
     </div>
 
     <!-- Images de déco -->
     <img id="trounoir" src="/images/Black-Hole-PNG-Transparent-Image.png" />
-    <img
-      id="fullscreen"
-      src="/images/fullscreen_FILL0_wght400_GRAD0_opsz48.png"
-    />
-    <img id="share" src="/images/share_FILL0_wght400_GRAD0_opsz48.png" />
-    <img id="mail" src="/images/mail_FILL0_wght400_GRAD0_opsz48.png" />
+    
+    <a target="_blank" href="https://twitter.com/Fraizhe"
+    ><img id="share" src="/images/share_FILL0_wght400_GRAD0_opsz48.png" />
+    </a>
+    <a href="mailto:bechetgregor5@gmail.com" target="_blank"
+    ><img id="mail" src="/images/mail_FILL0_wght400_GRAD0_opsz48.png" />
+    </a>
     <a href="https://api.nasa.gov/" target="_blank"
       ><img
         id="rocket"
@@ -58,7 +62,7 @@
     <!-- Saisir la date puis aller directement à la section APOD -->
     <a href="#APOD" id="goToAPOD">
       <div id="input">
-        <label>Entre une date </label>
+        <label>Select a date</label>
         <input type="date" id="date" onchange="window.location.href='#APOD'" />
       </div>
     </a>

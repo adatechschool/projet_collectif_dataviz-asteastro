@@ -7,6 +7,18 @@ html {
   font-family: "Poppins", sans-serif, Verdana, sans-serif;
 }
 
+#modeNoel{
+  font-family: "Poppins", sans-serif;
+  padding-right: 10px;
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: rgba(126,118,176, 0.85);
+  color: white;
+  border-radius: 5px;
+  border: none;
+}
+
 h1 {
   position: relative;
   color: white;
@@ -23,9 +35,8 @@ h1 {
   height: 170px;
   width: 170px;
   right: 185px;
-  top: 45px;
+  top: 40px;
   filter: hue-rotate(250deg);
-
   -webkit-animation-name: moonOrbit;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
@@ -53,38 +64,31 @@ h2 {
 
 #trounoir {
   position: absolute;
-  height: 400px;
+  height: 450px;
   left: -125px;
   top: -125px;
   z-index: -1;
-}
-#fullscreen {
-  position: absolute;
-  height: 50px;
-  filter: invert();
-  top: 10px;
-  right: 10px;
 }
 #share {
   position: absolute;
   height: 50px;
   filter: invert();
   top: 10px;
-  right: 85px;
+  right: 10px;
 }
 #mail {
   position: absolute;
   height: 50px;
   filter: invert();
   top: 10px;
-  right: 160px;
+  right: 85px;
 }
 #rocket {
   position: absolute;
   height: 50px;
   filter: invert();
   top: 10px;
-  right: 235px;
+  right: 160px;
 }
 
 /*INTRO*/
@@ -96,7 +100,10 @@ h2 {
   font-size: 25px;
   background-color: #7e76b0;
   opacity: 0.8;
-  padding: 12px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
   border-radius: 20%;
   margin-bottom: 25px;
 }
@@ -138,7 +145,7 @@ a:link {
 #input label {
   color: aliceblue;
   padding: 20px;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
 }
 

@@ -7,10 +7,10 @@ boutonNoel.onclick = function noelMode() {
  
     if (etat == true) {
         baliseLink.setAttribute("href", "/css/style-sombre.css");
-        boutonNoel.textContent = "Désactiver le mode Noël"
+        boutonNoel.textContent = "Toggle to the boring mode"
     } else {
         baliseLink.setAttribute("href", "/css/style.css");
-        boutonNoel.textContent = "Activer le mode Noël"
+        boutonNoel.textContent = "Toggle to the Christmas mode"
     }
 }
 
@@ -129,7 +129,7 @@ function addTitreNEO() {
 function addSousTitreNEO() {
   let newTitre = document.createElement("h4");
   let newContent = document.createTextNode(
-    "Clique sur la Terre pour découvrir l'astéroïde du jour !"
+    "Click on earth to discover the asteroid of the day!"
   );
   newTitre.appendChild(newContent);
   console.log(newTitre);
