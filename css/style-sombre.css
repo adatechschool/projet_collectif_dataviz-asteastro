@@ -1,7 +1,7 @@
 html {
   height: 100%;
   margin: 0;
-  background-image: url("/images/andy-holmes-rCbdp8VCYhQ-unsplash.jpg");
+  background-image: url("/images/neige.jpg");
   background-size: auto;
   /*background-repeat: no-repeat*/
   font-family: "Poppins", sans-serif, Verdana, sans-serif;
@@ -9,7 +9,7 @@ html {
 
 h1 {
   position: relative;
-  color: white;
+  color: rgb(208, 0, 0);
   text-align: center;
   font-family: "Poppins", sans-serif;
   font-size: 175px;
@@ -24,12 +24,6 @@ h1 {
   width: 170px;
   right: 185px;
   top: 45px;
-  filter: hue-rotate(250deg);
-
-  -webkit-animation-name: moonOrbit;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-duration: 15s;
 }
 
 hr {
@@ -52,6 +46,7 @@ h2 {
 /*IMAGES*/
 
 #trounoir {
+  display: none;
   position: absolute;
   height: 400px;
   left: -125px;
@@ -105,20 +100,6 @@ h2 {
   line-height: 30px;
 }
 
-/*PHOTOS AVANT 1995*/
-#oups {
-  text-align: center;
-  max-width: 500px;
-  margin: auto;
-  font-size: 15px;
-  background-color: #7e76b0;
-  color: white;
-  opacity: 0.9;
-  padding: 12px;
-  border-radius: 20%;
-  margin-bottom: 35px;
-  display: none;
-}
 /* DATE */
 
 input {

@@ -1,5 +1,18 @@
-const url =
-  "https://api.nasa.gov/planetary/apod?api_key=byMXZRYPDymQvCcgAEarTFUmCZVtf4OXrnRu5UPY&date=";
+/*Mode Noël*/
+let boutonNoel = document.getElementById("modeNoel");
+boutonNoel.onclick = function noelMode() {
+ 
+    let baliseLink = document.getElementById("css");
+    let etat = baliseLink.href.endsWith("/css/style.css");
+ 
+    if (etat == true) {
+        baliseLink.setAttribute("href", "/css/style-sombre.css");
+        boutonNoel.textContent = "Désactiver le mode Noël"
+    } else {
+        baliseLink.setAttribute("href", "/css/style.css");
+        boutonNoel.textContent = "Activer le mode Noël"
+    }
+}
 
 //Afficher l'image uniquement lorsqu'une date est sélectionnée
 document.getElementById("date").oninput = function () {
@@ -27,6 +40,9 @@ function dateSaisie() {
 }
 
 //Afficher l'image du jour (API APOD)
+const url =
+  "https://api.nasa.gov/planetary/apod?api_key=byMXZRYPDymQvCcgAEarTFUmCZVtf4OXrnRu5UPY&date=";
+
 function fetchData() {
   fetch(url + dateSaisie() + "&")
     .then((response) => {
