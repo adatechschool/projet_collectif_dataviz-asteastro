@@ -14,6 +14,7 @@ document.getElementById("date").oninput = function () {
   }
 };
 
+//Afficher les infos de l'asteroide lorsqu'on clique sur la terre
 document.getElementById("earth").onclick = function () {
   fetchAsteroides();
   hideAsteroidDescription();
@@ -33,12 +34,18 @@ function fetchData() {
     })
     .then((nasaData) => {
       console.log(nasaData);
-      const title = document.querySelector("#title");
-      title.innerHTML = nasaData.title;
-      const photo = document.querySelector("#photo");
-      photo.src = nasaData.url;
-      const description = document.querySelector("#description-picture");
-      description.innerHTML = nasaData.explanation;
+      if (nasaData.code == 400) {
+        const error = document.querySelector("#oups");
+        error.style.setProperty("display", "block");
+        error.innerHTML = nasaData.msg;
+      } else {
+        const title = document.querySelector("#title");
+        title.innerHTML = nasaData.title;
+        const photo = document.querySelector("#photo");
+        photo.src = nasaData.url;
+        const description = document.querySelector("#description-picture");
+        description.innerHTML = nasaData.explanation;
+      }
     });
 }
 
