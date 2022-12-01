@@ -8,14 +8,15 @@ html {
 }
 
 h1 {
-  position: relative;
-  color: #c91100;
+  /*position: relative;*/
+  color: #bf242e;
   text-align: center;
   font-family: "Poppins", sans-serif;
   font-size: 175px;
   font-size: lighter;
-  right: -85px;
   margin-bottom: 60px;
+  position: relative;
+  left: -75px;
 }
 
 #modeNoel{
@@ -31,17 +32,15 @@ h1 {
 }
 
 #planete {
-  position: relative;
+  display: inline-block;
+  padding: -40px;
   height: 170px;
   width: 170px;
-  right: 185px;
-  top: 40px;
-  /*background-image: url("/images/planete_noel.png");
-  background-size: contain;*/
-  -webkit-animation-name: moonOrbit;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-duration: 15s;
+  background-image: url("/images/planete_noel.png");
+  background-size: contain;
+  position: absolute;
+  top: 12%;
+  left: 80;
 }
 
 hr {

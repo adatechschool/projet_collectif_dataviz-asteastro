@@ -20,23 +20,29 @@ html {
 }
 
 h1 {
-  position: relative;
+  /*position: relative;*/
   color: white;
   text-align: center;
   font-family: "Poppins", sans-serif;
   font-size: 175px;
   font-size: lighter;
-  right: -85px;
   margin-bottom: 60px;
+  position: relative;
+  left: -75px;
 }
 
 #planete {
-  position: relative;
+  display: inline-block;
+  padding: -40px;
   height: 170px;
   width: 170px;
-  right: 185px;
-  top: 40px;
   filter: hue-rotate(250deg);
+  background-image: url("/images/exploding-planet-with-transparent-background-psd-415168.png");
+  background-size: contain;
+  position: absolute;
+  top: 22%;
+  left: 79%;
+
   -webkit-animation-name: moonOrbit;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
