@@ -110,7 +110,7 @@ function fetchAsteroides() {
 // Créer les éléments HTML
 function addTitreAPOD() {
   let newTitre = document.createElement("h2");
-  let newContent = document.createTextNode("Picture of the Day");
+  let newContent = document.("Picture of the Day");
   newTitre.appendChild(newContent);
   console.log(newTitre);
   let currentDiv = document.getElementById("input");

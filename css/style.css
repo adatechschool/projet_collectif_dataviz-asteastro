@@ -132,6 +132,7 @@ h2 {
   margin-bottom: 35px;
   display: none;
 }
+
 /* DATE */
 
 input {
@@ -379,8 +380,8 @@ h4 {
   #planete {
     height: 110px;
     width: 110px;
-    right: 125px;
-    top: 28px;
+    top: 22%;
+    left: 75%;
   }
   hr {
     top: -60px;
@@ -416,8 +417,8 @@ h4 {
   #planete {
     height: 70px;
     width: 70px;
-    right: 75px;
-    top: 15px;
+    top: 22%;
+    left: 75%;
   }
   hr {
     top: -60px;
