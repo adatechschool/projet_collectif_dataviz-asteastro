@@ -3,20 +3,21 @@ html {
   margin: 0;
   background-image: url("/images/snowGif.gif");
   background-size: auto;
-  /*background-repeat: no-repeat*/
   font-family: "Poppins", sans-serif, Verdana, sans-serif;
 }
 
-h1 {
-  /*position: relative;*/
-  color: #bf242e;
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-  font-size: 175px;
-  font-size: lighter;
-  margin-bottom: 60px;
-  position: relative;
-  left: -75px;
+/* MODE NOEL + ICONES */
+
+#trounoir {
+  display: none;
+}
+
+#nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 #modeNoel{
@@ -31,25 +32,58 @@ h1 {
   border: none;
 }
 
+#icones{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#share {
+  height: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#mail {
+  height: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#rocket {
+  height: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* TITRE */
+
+h1 {
+  position: relative;
+  color: #bf242e;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 175px;
+  font-size: lighter;
+  margin-top: 50px;
+  margin-bottom: 0;
+  left: -50px;
+}
+
 #planete {
-  display: inline-block;
-  padding: -40px;
-  height: 170px;
-  width: 170px;
-  background-image: url("/images/planete_noel.png");
-  background-size: contain;
   position: absolute;
-  top: 12%;
-  left: 80;
+  display: inline-block;
+  height: 165px;
+  width: 165px;
+  /*background-image: url("/images/planete_noel.png");
+  background-size: contain;*/
+  top: 22%;
+
+  -webkit-animation-name: moonOrbit;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-duration: 15s;
 }
 
 hr {
-  position: relative;
-  top: -60px;
-  border: 0;
-  height: 3px;
-  width: 500px;
-  background-color: white;
   display: none;
 }
 
@@ -59,79 +93,78 @@ hr {
   height: 130px;
   max-width: 290px;
   margin: auto;
-  position: relative;
-  top: -120px;
+  /*position: relative;
+  top: -120px;*/
   z-index: 1;
+  margin-bottom: 50px;
 }
 
 h2 {
   color:#c91100;
   text-align: center;
-  font-size: 4vw;
+  font-size: 40px;
   margin-top: 80px;
   font-family: "Poppins", sans-serif;
 }
 
-/*IMAGES*/
-
-#trounoir {
-  display: none;
-  position: absolute;
-  height: 400px;
-  left: -125px;
-  top: -125px;
-  z-index: -1;
-}
-#share {
-  position: absolute;
-  height: 50px;
-  top: 10px;
-  right: 10px;
-}
-#mail {
-  position: absolute;
-  height: 50px;
-  top: 10px;
-  right: 85px;
-}
-#rocket {
-  position: absolute;
-  height: 50px;
-  top: 10px;
-  right: 160px;
-}
-
 /*INTRO*/
 
-#guirlande{
-  background-image: url("/images/cadre_guirlande.png");
-  background-size: cover;
-  height: 320px;
-  max-width: 750px;
+/*texte d'intro + contour guirlande*/
+
+.introduction {
   margin: auto;
   display: flex;
   align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 800px;
+  max-height: 357px;
+  margin-top: 150px;
+  margin-bottom: 120px;
 }
 
-.introduction {
-  text-align: center;
-  max-width: 500px;
-  margin: auto;
-  font-size: 25px;
-  background-color: rgba(255, 255, 255, 0.5);
-  margin-top: 45px;
-  padding-left: 70px;
-  padding-right: 70px;
-  padding-top: 25px;
-  padding-bottom: 15px;
-  z-index: -1;
+#guirlandeImage{
+  position: absolute;
+  z-index: 1;
+  width: 100%;
 }
 
 .introduction p {
-  line-height: 30px;
+  z-index: 2;
+  top: 15%;
+  font-size: clamp(14px, 2.3vw, 2rem);
+  text-align: center;
+  width: 75%;
+  margin: 0;
   color: #c91100;
   font-weight: bold;
 }
+
+
+/*V2
+
+.introduction {
+  max-width: 800px;
+}
+
+#guirlande{ 
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  width: 100%;
+  height: 357px;
+  background-image: url("/images/cadre_guirlande.png");
+}
+
+#guirlande p {
+  font-size: 2vw;
+  font-weight: bold;
+  text-align: center;
+  color: #c91100;
+}
+*/
 
 /*PHOTOS AVANT 1995*/
 #oups {
@@ -177,16 +210,19 @@ a:link {
   text-align: center;
 }
 
+#photo{
+  width: 100%;
+}
+
 p {
   color: white;
-  line-height: 24px;
+  /* line-height: 24px; */
 }
 
 /* ASTEROIDE DU JOUR */
 
 #NEO {
   padding: 5px;
-  /*margin: auto;*/
 }
 
 #NEO .content {
@@ -221,10 +257,8 @@ h4 {
 .content {
   display: flex;
   flex-direction: row;
-  /*justify-content: center;*/
   align-items: flex-start;
   flex-wrap: wrap;
-  /*margin-top: 25px;*/
   padding: 14px;
   margin: auto;
 }
@@ -386,78 +420,63 @@ h4 {
   width: 20px;
 }
 
-/*ne s'exécute que quand la largeur d'écran est <= 1100px*/
-@media screen and (max-width: 1100px) {
+/*Tablette : entre 600 et 1024 pixels (en mode portrait)*/
+@media screen and (max-width: 1024px) {
   h1 {
     font-size: 115px;
-    right: -75px;
+  }
+  hr {
+    width: 300px;
   }
   #planete {
     height: 110px;
     width: 110px;
-    right: 125px;
-    top: 28px;
   }
-  hr {
-    top: -60px;
-  }
-  #fullscreen {
+  #share, #mail, #rocket {
     height: 40px;
-    top: 10px;
-    right: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
-  #share {
-    height: 40px;
-    top: 10px;
-    right: 60px;
-  }
-  #mail {
-    height: 40px;
-    top: 10px;
-    right: 120px;
-  }
-  #rocket {
-    height: 40px;
-    top: 10px;
-    right: 180px;
+  #earth {
+    height: 300px;
+    width: 300px;
+    background-size: contain;
   }
 }
 
-/*ne s'exécute que quand la largeur d'écran est <= 760px*/
-@media screen and (max-width: 760px) {
+/*Mobile : entre 320 et 600 pixels (en mode portrait)*/
+@media screen and (max-width: 600px) {
+  html {
+    margin: 1%;
+  }
   h1 {
-    font-size: 70px;
-    right: -45px;
+    font-size: 60px;
+    left: 0;
   }
   #planete {
     height: 70px;
     width: 70px;
-    right: 75px;
-    top: 15px;
   }
-  hr {
-    top: -60px;
+  #tampon{
+    height: 100px;
+    max-width: 230px;
+    margin: auto;
+    /*position: relative;
+    top: -120px;*/
+    z-index: 1;
+    margin-bottom: 50px;
   }
-  #fullscreen {
+  #icones{
+    margin-top: 10px;
+  }
+  #share, #mail, #rocket {
     height: 25px;
-    top: 5px;
-    right: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
-  #share {
-    height: 25px;
-    top: 5px;
-    right: 40px;
-  }
-  #mail {
-    height: 25px;
-    top: 5px;
-    right: 75px;
-  }
-  #rocket {
-    height: 25px;
-    top: 5px;
-    right: 115px;
+  #earth {
+    height: 250px;
+    width: 250px;
+    background-size: contain;
   }
 }
-
-

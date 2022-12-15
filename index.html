@@ -17,43 +17,42 @@
 
   <body>
 
-    <!-- Mode Noël -->
-    <button id="modeNoel">&#127876 Toggle to the Christmas Mode</button>
+    <!-- Navigation : mode Noël + icônes -->
+    <div id="nav">
+      <div id="NoelMode">
+        <button id="modeNoel">&#127876 Toggle to the Christmas Mode</button>
+      </div>
+      <div id="icones">
+        <a href="https://twitter.com/Fraizhe" target="_blank"><img id="share" src="/images/share_FILL0_wght400_GRAD0_opsz48.png" /></a>
+        <a href="mailto:bechetgregor5@gmail.com" target="_blank"><img id="mail" src="/images/mail_FILL0_wght400_GRAD0_opsz48.png" /></a>
+        <a href="https://api.nasa.gov/" target="_blank"><img id="rocket" src="/images/rocket_launch_FILL0_wght400_GRAD0_opsz48.png"/></a>
+      </div>
+    </div>
 
     <!-- En-tête -->
+
+    <img id="trounoir" src="/images/Black-Hole-PNG-Transparent-Image.png" />
+    
     <h1>
-      Asté Astr<span id="planete"></span>
+      Asté Astr
+      <span >
+        <img id="planete" src="/images/exploding-planet-with-transparent-background-psd-415168.png">
+      </span> 
     </h1>
 
     <hr />
 
     <div id="tampon"></div>
 
-    <div id="guirlande">
       <div class="introduction">
+        <img id="guirlandeImage" src="/images/cadre_guirlande.png">
         <p>
           &#128640; Welcome to Asté Astro website! <br>
           It allows you for a given date to discover the astronomical photo of the day
           as well as the nearest object to the earth, thanks to information provided by NASA.
         </p>
       </div>
-    </div>
-
-    <!-- Images de déco -->
-    <img id="trounoir" src="/images/Black-Hole-PNG-Transparent-Image.png" />
     
-    <a target="_blank" href="https://twitter.com/Fraizhe"
-    ><img id="share" src="/images/share_FILL0_wght400_GRAD0_opsz48.png" />
-    </a>
-    <a href="mailto:bechetgregor5@gmail.com" target="_blank"
-    ><img id="mail" src="/images/mail_FILL0_wght400_GRAD0_opsz48.png" />
-    </a>
-    <a href="https://api.nasa.gov/" target="_blank"
-      ><img
-        id="rocket"
-        src="/images/rocket_launch_FILL0_wght400_GRAD0_opsz48.png"
-    /></a>
-
     <!-- Saisir la date puis aller directement à la section APOD -->
     <a href="#APOD" id="goToAPOD">
       <div id="input">
@@ -71,7 +70,9 @@
     <!-- Photo du jour -->
     <section id="APOD">
       <div class="content">
-        <div class="image"><img id="photo" /></div>
+        <div class="image">
+          <img id="photo" />
+        </div>
         <div id="content-picture">
           <h3 id="title"></h3>
           <p id="description-picture"></p>
@@ -81,19 +82,15 @@
 
     <!-- Astéroïde autour de la terre -->
     <section id="NEO">
+
       <div class="content">
+
         <div id="earth">
           <div id="moonContainer">
             <div id="moon"></div>
           </div>
           <div id="moonContainer2">
             <div id="moon2"></div>
-          </div>
-          <div id="moonContainer3">
-            <div id="moon3"></div>
-          </div>
-          <div id="moonContainer4">
-            <div id="moon4"></div>
           </div>
         </div>
 
